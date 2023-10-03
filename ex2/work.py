@@ -2,7 +2,18 @@ from math import ceil
 
 def calc_account(m):
     # 実装は入れていません、自分で入れてください
-    pass
+    min = 610
+    distance = 315
+    price_per_dis = 80
+    
+    if m <= 0:
+        return None
+    elif m <= 1700:
+        return min
+    else:
+        price = ceil((m - 1700) / distance) * price_per_dis + min
+        return price
+        
 
 if __name__ == "__main__":
     from argparse import ArgumentParser
